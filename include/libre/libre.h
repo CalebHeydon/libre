@@ -28,6 +28,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #pragma once
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 #define LIBRE_VERSION_MAJOR 0
 #define LIBRE_VERSION_MINOR 1
 #define LIBRE_VERSION_PATCH 0
@@ -38,3 +43,7 @@ typedef struct libre_version
 } libre_version_t;
 
 libre_version_t libre_version(void);
+
+#ifdef __cplusplus
+}
+#endif

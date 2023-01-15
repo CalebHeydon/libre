@@ -28,6 +28,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #pragma once
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 #include <GLFW/glfw3.h>
 #include <stdbool.h>
 
@@ -47,3 +52,7 @@ bool libre_window_should_close(libre_window_t window);
 void libre_window_destroy(libre_window_t window);
 void libre_window_swap_buffers(libre_window_t window);
 void libre_window_center(libre_window_t window);
+
+#ifdef __cplusplus
+}
+#endif

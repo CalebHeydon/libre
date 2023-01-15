@@ -28,6 +28,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #pragma once
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 #include <stdint.h>
 
 #include "window.h"
@@ -83,3 +88,7 @@ void libre_opengl_shader_destroy(libre_opengl_shader_t shader);
 libre_opengl_texture_t libre_opengl_texture(libre_window_t window, GLsizei width, GLsizei height, uint8_t *data, GLint wrap, GLint filter);
 void libre_opengl_texture_bind(libre_opengl_texture_t texture);
 void libre_opengl_texture_destroy(libre_opengl_texture_t texture);
+
+#ifdef __cplusplus
+}
+#endif

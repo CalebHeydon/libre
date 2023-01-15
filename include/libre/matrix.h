@@ -28,6 +28,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #pragma once
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 #define LIBRE_MATRIX_TYPE float
 
 typedef struct libre_matrix
@@ -51,3 +56,7 @@ libre_matrix_t libre_matrix_multiply(libre_matrix_t a, libre_matrix_t b, libre_m
 libre_matrix_t libre_matrix_projection_ortho(LIBRE_MATRIX_TYPE l, LIBRE_MATRIX_TYPE r, LIBRE_MATRIX_TYPE t, LIBRE_MATRIX_TYPE b, LIBRE_MATRIX_TYPE n, LIBRE_MATRIX_TYPE f, int *result);
 libre_matrix_t libre_matrix_translation(LIBRE_MATRIX_TYPE x, LIBRE_MATRIX_TYPE y, LIBRE_MATRIX_TYPE z, int *result);
 libre_matrix_t libre_matrix_rotation(LIBRE_MATRIX_TYPE w, LIBRE_MATRIX_TYPE x, LIBRE_MATRIX_TYPE y, LIBRE_MATRIX_TYPE z, int *result);
+
+#ifdef __cplusplus
+}
+#endif
